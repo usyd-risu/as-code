@@ -1,0 +1,127 @@
+<style>
+
+.boxaccordion {
+
+background-color: #404040;
+
+color: white;
+
+cursor: pointer;
+
+padding: 18px;
+
+width: 100%;
+
+border: none;
+
+text-align: left;
+
+outline: none;
+
+font-size: 15px;
+
+font-weight: bold;
+
+transition: 0.4s;
+
+}
+
+.boxaccordion:hover {
+
+background-color: #D16053;
+
+}
+
+.boxaccordion:after {
+
+color: white;
+
+font-weight: bold;
+
+float: right;
+
+margin-left: 5px;
+
+}
+
+.boxpanel {
+
+padding: 0 10px;
+
+margin-bottom: 5px;
+
+background-color: white;
+
+font-family: Helvetica;
+
+max-height: 0;
+
+overflow: hidden;
+
+transition: max-height 0.2s ease-out;
+
+}
+
+p {
+
+font-family: Helvetica;
+
+}
+
+h2 {
+
+font-family: Helvetica;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<button class="boxaccordion">SECTION TITLE</button>
+
+<div class="boxpanel">
+
+<p>
+
+CONTENT
+
+</p>
+
+</div>
+
+<script>
+
+var acc = document.getElementsByClassName("boxaccordion");
+
+var i;
+
+for (i = 0; i < acc.length; i++) {
+
+acc[i].addEventListener("click", function() {
+
+this.classList.toggle("boxactive");
+
+var boxpanel = this.nextElementSibling;
+
+if (boxpanel.style.maxHeight) {
+
+boxpanel.style.maxHeight = null;
+
+} else {
+
+boxpanel.style.maxHeight = boxpanel.scrollHeight + "px";
+
+}
+
+});
+
+}
+
+</script>
+
+</body>
+
+</html>

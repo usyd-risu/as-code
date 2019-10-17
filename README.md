@@ -1,2 +1,12 @@
 # as-code
  a place to store bits of code that people in academic services want to share
+
+
+## Table of Contents
+
+[Accordion Code: Developed by Pat Norman](https://usyd-risu.github.io/as-code/accordion-code/accordion-code-linked/index.html)
+
+
+##That's all folks!
+
+Brought to you by the Research and Information Skills Unit at the University of Sydney.
