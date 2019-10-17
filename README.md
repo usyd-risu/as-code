@@ -5,6 +5,7 @@
 ## Table of Contents
 
 [Accordion Code: Developed by Pat Norman](https://usyd-risu.github.io/as-code/accordion-code/accordion-code-linked/)
+
 [Social Impact Tool: Developed by RISU, Designed by Emma Gerts](https://usyd-risu.github.io/social-impact-tool/index.html)
 
 
