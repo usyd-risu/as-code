@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-[Accordion Code: Developed by Pat Norman](https://usyd-risu.github.io/as-code/accordion-code/accordion-code-linked/index.html)
+[Accordion Code: Developed by Pat Norman](https://usyd-risu.github.io/as-code/accordion-code/accordion-code-linked/)
 
 
 ##That's all folks!
