@@ -7,6 +7,6 @@
 [Accordion Code: Developed by Pat Norman](https://usyd-risu.github.io/as-code/accordion-code/accordion-code-linked/)
 
 
-##That's all folks!
+## That's all folks!
 
 Brought to you by the Research and Information Skills Unit at the University of Sydney.
