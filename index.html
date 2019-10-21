@@ -1,0 +1,128 @@
+
+<!-- Inspired by Pieter Biesemans Code snippet Repository https://codepen.io/pieter-biesemans/pen/zjMOex -->
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <title>title</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css" type="text/css">
+   <link rel="stylesheet" href="assets/css/styles.scss" type="text/css">
+ </head>
+ <body>
+   <h1>Code snippet repository</h1>
+  <div class="repo" id="repo">
+    <input class="search" placeholder="Search">
+    <span class="sort" data-sort="name">Sort by name</span>
+    <span class="sort" data-sort="lang">Sort by language</span>
+    <br><br>
+    <div class="list">
+      <!-- A -->
+      <div class="snippet">
+        <details>
+          <summary><span class="name">Accordion Boxes</span> <span class="lang">[html]</span></summary>
+          <pre><code class="code html">
+            &lthead>
+              &ltstyle>
+                .boxaccordion {
+                  background-color: #404040;
+                  color: white;
+                  cursor: pointer;
+                  padding: 18px;
+                  width: 100%;
+                  border: none;
+                  text-align: left;
+                  outline: none;
+                  font-size: 15px;
+                  font-weight: bold;
+                  transition: 0.4s;
+                }
+                .boxaccordion:hover {
+                  background-color: #D16053;
+                }
+                .boxaccordion:after {
+                  color: white;
+                  font-weight: bold;
+                  float: right;
+                  margin-left: 5px;
+                }
+                .boxpanel {
+                  padding: 0 10px;
+                  margin-bottom: 5px;
+                  background-color: white;
+                  font-family: Helvetica;
+                  max-height: 0;
+                  overflow: hidden;
+                  transition: max-height 0.2s ease-out;
+                }
+                p {
+                  font-family: Helvetica;
+                }
+                h2 {
+                  font-family: Helvetica;
+                }
+              &lt/style>
+            &lt/head>
+            &ltbody>
+              &ltbutton class="boxaccordion">SECTION TITLE&lt/button>
+                &ltdiv class="boxpanel">
+                  &ltp>CONTENT&lt/p>
+                &lt/div>
+
+              &ltscript>
+                var acc = document.getElementsByClassName("boxaccordion");
+                var i;
+                for (i = 0; i < acc.length; i++) {
+                  acc[i].addEventListener("click", function() {
+                    this.classList.toggle("boxactive");
+                    var boxpanel = this.nextElementSibling;
+                    if (boxpanel.style.maxHeight) {
+                      boxpanel.style.maxHeight = null;
+                    } else {
+                      boxpanel.style.maxHeight = boxpanel.scrollHeight + "px";
+                    }
+                  });
+                }
+              &lt/script>
+            &lt/body>
+          </code></pre>
+          <a href = "https://usyd-risu.github.io/as-code/accordion-code/accordion-code.zip" download>
+            Download
+          </a>
+          <a href = "https://usyd-risu.github.io/as-code/accordion-code/accordion-code-embed.html">
+            See example
+          </a>
+        </details>
+      </div>
+      <!-- C -->
+      <div class="snippet">
+        <details>
+          <summary><span class="name">Center horizontally</span> <span class="lang">[SCSS]</span></summary>
+          <pre><code class="code scss">
+    @mixin hcenter(){
+      position: absolute;
+      left: 50%;
+      transform: translatex(-50%);
+    }
+          </code></pre>
+        </details>
+      </div>
+  <!--
+      <div class="snippet">
+        <details>
+          <summary><span class="name">Code title</span> <span class="lang">[lang]</span></summary>
+          <pre><code class="">
+          teh codez
+          </code></pre>
+        </details>
+      </div>
+  -->
+
+    </div>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scss.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.js"></script>
+  <script src="assets/js/list_script.js"></script>
+ </body>
+</html>
