@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <title>title</title>
+ <link rel="stylesheet" href="stylesheet.css" type="text/css">
+ </head>
+ <body>
+   <!-- nifty little trick very lightweight for simple text filtering.
+     original code: http://jsfiddle.net/6PrQW/1/
+     stackoverflow thread: https://stackoverflow.com/questions/23430949/jquery-multiple-dropdown-filter-menu/23433834
+   -->
+   <header>
+     This is where we write context and explanation of what this tool is!
+   </header>
+   <one>
+     <select class="filterby">
+           <option value="all"><h5>Select Category</h5></option>
+           <option value="nhmrc"><h5>NHMRC</h5></option>
+           <option value="arc"><h5>ARC</h5></option>
+           <option value="link"><h5>Linkage</h5></option>
+         </select>
+   </one>
+   <two>
+     <select class="filterby">
+           <option value="all"><h5>Select impact type</h5></option>
+           <option value="soc"><h5>Social</h5></option>
+           <option value="enviro"><h5>Environmental</h5></option>
+           <option value="cult"><h5>Cultural</h5></option>
+       <option value="eco"><h5>Economic</h5></option>
+         </select>
+   </two>
+   <three>
+     <select class="filterby">
+           <option value="all"><h5>Select Discipline</h5></option>
+           <option value="med"><h5>Health and Medicine</h5></option>
+           <option value="art"><h5>Arts and Humanities</h5></option>
+           <option value="law"><h5>Law/Business</h5></option>
+       <option value="stem"><h5>Science and Engineering</h5></option>
+         </select>
+   </three>
+   <results>
+     <div id="FilterContainer">
+
+
+     <div class="all nhmrc soc eco med"><a href="https://libguides.library.usyd.edu.au/standardsandpatents"><b>Standards</a></b><br>Access a range of Australian and International standards.</div>
+     <div class="all nhmrc eco med cult"> <a href="http://theconversation.com/au"><b> The Conversation</a></b><br> If you've published in The Conversation, check your community engagement.</div>
+     <div class="all nhmrc med stem soc"><a href="http://ezproxy.library.usyd.edu.au/login?url=http://www.capitalmonitor.com.au/intranetlogin.aspx"><b>Capital Monitor</a></b><br>Show your mentions in Hansard, presentations to parliamentary committees, being an expert witness in a court case.</div>
+     <div class="all nhmrc med soc"><a href="http://www.anzctr.org.au/"><b>Australia and New Zealand Clinical Trials Registry</a></b><br> Find mentions of your research in clinical trials conducted in Australia and New Zealand. <a href="http://www.anzctr.org.au/HowToSearch.aspx">How to Search </div>
+     <div class="all soc nhmrc med"><a href="https://www.google.com.au/advanced_search"><b> Google Scholar</a></b><br> Find Government reports.</div>
+     <div class="all soc nhmrc med"><a href="https://www.aihw.gov.au/reports-data"><b> Australian Institute of Health and Welfare</a></b><br> Search for your name to find references to your work.</div>
+       <div class="all soc nhmrc med arc"><a href="https://www.lens.org/"><b>The Lens</a></b><br> Search for patents. <a href="https://support.lens.org/help-resources/video-tutorial/patent-search-analysis/">Video Tutorial</a></div>
+         <div class="all cult soc link art"><b>News Media</b><br>Find media mentions in the following sources.<br><br>
+           <a href="http://ezproxy.library.usyd.edu.au/login?url=https://global.factiva.com/en/du/newspage.asp?pageType=group&newspageId=44302873&XSID=S003XNvZDAn5DEu5DEpNTEqN9YoM97yMHn0YqYvMq382rbRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA">Factiva *</a><br>Search across Australian and International news and Media reports.<br><br><a href="http://ezproxy.library.usyd.edu.au/login?url=http://search.proquest.com/anznews?accountid=14757">Proquest</a><br>Search across Australian news sources owned by Fairfax media. <br><br>
+           <a href="http://ezproxy.library.usyd.edu.au/login?url=https://search.informit.com.au/advanced;res=TVNEWSA">TVNews Archive</a><br>Search Australian television news, current affairs programs, and selected documentaries from the free-to-air networks and links to the video files.<br> <br>
+           <a href="search-beta.abc.net.au/#/">ABC News</a><br>Advanced search across the ABC news website.
+       </div>
+       <div class="all arc art cult"><a href="https://trove.nla.gov.au/"><b>Trove</a></b><br>Search for your book or exhibiton across Australian Libraries, museums and archives.</a></div>
+       <div class="all arc art cult"><a href="https://www.austlit.edu.au/"><b>Austlit</a></b><br>Search for book Australian book reviews.</a></div>
+     <div class="all nhmrc eco soc enviro cult med"><b><a href="apo.org.au">APO</a></b>
+         <br>Find Australian public policy. </div>
+       <div class="all nhmrc soc med"><b><a href="https://www.google.com.au/advanced_search">Google Advanced Search</b></a><br>Find Health Programs. <a href="https://libguides.library.usyd.edu.au/c.php?g=508093&p=3475860"> Advanced Search Tips</a></div>
+       <div class="all nhmrc soc med"><b><a href="https://www.clinicalguidelines.gov.au/">Australian Clinical Practice Guidelines</a></b><br>Find references to your work in clinical practice. <a href="https://www.clinicalguidelines.gov.au/faq-page">FAQ</a></div>
+
+
+
+
+
+     </div>
+   </results>
+   <footer>
+     Contact details maybe? How to reach your ALL?
+   </footer>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+   <script src="script.js" type="text/javascript"></script>
+   <script type="text/javascript">
+    function autorun()
+    {
+
+    }
+    if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
+    else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
+    else window.onload = autorun;
+   </script>
+ </body>
+</html>
