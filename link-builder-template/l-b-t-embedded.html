@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <title>Link Builder Template</title>
+ <link rel="stylesheet" href="stylesheet.css" type="text/css">
+ </head>
+ <body>
+     Class or ResCon
+    <select class="filterby" id="tyID">
+      <option value="0"></option>
+      <option value="1">Class</option>
+      <option value="2">ResCon</option>
+    </select>
+  <div id="myForm">
+  <div class="1">
+  Session Name:
+    <input type="text" name="trainer" id="sID">
+  </div>
+  <div class="1 2">
+  Trainer ID:
+    <input type="text" name="trainer" id="tID">
+  </div>
+  <div class="1 2">
+  Faculty
+    <select id="fID">
+      <option></option>
+      <option value="archDes">Architecture Design and Planning</option>
+      <option value="medHea">Medicine and Health</option>
+      <option value="multi">Multidisciplinary</option>
+      <option value="nonFac">Non Faculty</option>
+      <option value="FASS">Arts and Social Sciences</option>
+      <option value="heaSci">Health Sciences</option>
+      <option value="sci">Science</option>
+      <option value="engIT">Engineering and Information Technologies</option>
+
+    </select>
+  </div>
+  <div class="1 2">
+  Your Link:
+    <input type="text" id="myMessage">
+    <button id="genbut" onclick="gen()" >Generate Link</button>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    //this is the part that filters out unneeded fields depending on whether you're getting a rescon or a class feedback form
+    var filt = function(){
+
+      document.getElementById("myForm").style.display = "none";
+      $("select.filterby").change(function(){
+          //alert("The text has been changed.");
+          var filters = $.map($("select.filterby").toArray(), function(e){
+              return $(e).val();
+          }).join(".");
+          document.getElementById("myForm").style.display = "block";
+          $("div#myForm").find("div").hide();
+          $("div#myForm").find("div." + filters).show();
+      });
+    }
+
+    // This is the part that generates the URL onclick="gen()"
+    var gen = function(){
+
+          var type    = document.getElementById("tyID");
+          var session = document.getElementById("sID");
+          var trainer = document.getElementById("tID");
+          var faculty = document.getElementById("fID");
+          var linkbox = document.getElementById("myMessage");
+          var url;
+          //var str1 = "type is: "
+          if (type.value === "0") {
+            url = "please select whether your link is for a Class or a ResCon";
+            url = url.replace(/ /gi, '');
+          }
+          else if (type.value === "1") {
+            url = 'www.Class.com' + session.value + trainer.value + faculty.value;
+            url = url.replace(/ /gi, '');
+          }
+          else if (type.value === "2") {
+            url = 'www.ResCon.com' + session.value + trainer.value + faculty.value;
+            url = url.replace(/ /gi, '');
+          }
+
+           linkbox.value = url;
+           //console.log(type is: 'type.value);
+           console.log(url);
+      };
+
+    //document.getElementById("genbut").onclick = gen();
+    window.onload = filt();
+  </script>
+<body>
+</html>

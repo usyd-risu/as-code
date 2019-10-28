@@ -8,6 +8,7 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css" type="text/css">
    <link rel="stylesheet" href="assets/css/styles.scss" type="text/css">
  </head>
+ <script src="assets/js/includehtml.js"></script>
  <body>
    <h1>Academic Services Code snippet repository</h1>
   <div class="repo" id="repo">
@@ -16,7 +17,7 @@
     <span class="sort" data-sort="lang">Sort by language</span>
     <br><br>
     <div class="list">
-      <!-- A -->
+      <!-- Accordion Boxes -->
       <div class="snippet">
         <details>
           <summary><span class="name">Accordion Boxes by Pat Norman</span> <span class="lang">[html]</span></summary>
@@ -93,7 +94,7 @@
           </a>
         </details>
       </div>
-      <!-- C -->
+      <!-- Social Impact Tool -->
       <div class="snippet">
         <details>
           <summary><span class="name">Social Impact Tool by Emma Gerts</span> <span class="lang">[html]</span></summary>
@@ -272,6 +273,10 @@
           </a>
         </details>
       </div>
+      <!-- Accordion Boxes (SSI) -->
+      <div class="snippet">
+        <details w3-include-html="accordion-precode.html"></details>
+      </div>
   <!--
       <div class="snippet">
         <details>
@@ -289,6 +294,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scss.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.js"></script>
+  <script>
+    includeHTML();
+  </script>
   <script src="assets/js/list_script.js"></script>
  </body>
 </html>

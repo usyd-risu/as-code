@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <title>Link Builder Template</title>
+ <link rel="stylesheet" href="stylesheet.css" type="text/css">
+ </head>
+ <body>
+     Class or ResCon
+    <select class="filterby" id="tyID">
+      <option value="0"></option>
+      <option value="1">Class</option>
+      <option value="2">ResCon</option>
+    </select>
+  <div id="myForm">
+  <div class="1">
+  Session Name:
+    <input type="text" name="trainer" id="sID">
+  </div>
+  <div class="1 2">
+  Trainer ID:
+    <input type="text" name="trainer" id="tID">
+  </div>
+  <div class="1 2">
+  Faculty
+    <select id="fID">
+      <option></option>
+      <option value="archDes">Architecture Design and Planning</option>
+      <option value="medHea">Medicine and Health</option>
+      <option value="multi">Multidisciplinary</option>
+      <option value="nonFac">Non Faculty</option>
+      <option value="FASS">Arts and Social Sciences</option>
+      <option value="heaSci">Health Sciences</option>
+      <option value="sci">Science</option>
+      <option value="engIT">Engineering and Information Technologies</option>
+
+    </select>
+  </div>
+  <div class="1 2">
+  Your Link:
+    <input type="text" id="myMessage">
+    <button id="genbut" onclick="gen()" >Generate Link</button>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+  <script src="script.js" type="text/javascript"></script>
+<body>
+</html>
