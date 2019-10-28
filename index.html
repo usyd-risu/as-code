@@ -19,87 +19,14 @@
     <div class="list">
       <!-- Accordion Boxes -->
       <div class="snippet">
-        <details>
-          <summary><span class="name">Accordion Boxes by Pat Norman</span> <span class="lang">[html]</span></summary>
-          <pre><code class="code html">
-            &lthead>
-              &ltstyle>
-                .boxaccordion {
-                  background-color: #404040;
-                  color: white;
-                  cursor: pointer;
-                  padding: 18px;
-                  width: 100%;
-                  border: none;
-                  text-align: left;
-                  outline: none;
-                  font-size: 15px;
-                  font-weight: bold;
-                  transition: 0.4s;
-                }
-                .boxaccordion:hover {
-                  background-color: #D16053;
-                }
-                .boxaccordion:after {
-                  color: white;
-                  font-weight: bold;
-                  float: right;
-                  margin-left: 5px;
-                }
-                .boxpanel {
-                  padding: 0 10px;
-                  margin-bottom: 5px;
-                  background-color: white;
-                  font-family: Helvetica;
-                  max-height: 0;
-                  overflow: hidden;
-                  transition: max-height 0.2s ease-out;
-                }
-                p {
-                  font-family: Helvetica;
-                }
-                h2 {
-                  font-family: Helvetica;
-                }
-              &lt/style>
-            &lt/head>
-            &ltbody>
-              &ltbutton class="boxaccordion">SECTION TITLE&lt/button>
-                &ltdiv class="boxpanel">
-                  &ltp>CONTENT&lt/p>
-                &lt/div>
-
-              &ltscript>
-                var acc = document.getElementsByClassName("boxaccordion");
-                var i;
-                for (i = 0; i < acc.length; i++) {
-                  acc[i].addEventListener("click", function() {
-                    this.classList.toggle("boxactive");
-                    var boxpanel = this.nextElementSibling;
-                    if (boxpanel.style.maxHeight) {
-                      boxpanel.style.maxHeight = null;
-                    } else {
-                      boxpanel.style.maxHeight = boxpanel.scrollHeight + "px";
-                    }
-                  });
-                }
-              &lt/script>
-            &lt/body>
-          </code></pre>
-          <a href = "https://usyd-risu.github.io/as-code/accordion-code/accordion-code.zip" download>
-            Download
-          </a>
-          <a href = "https://usyd-risu.github.io/as-code/accordion-code/accordion-code-embed.html">
-            See example
-          </a>
-        </details>
+        <details w3-include-html="accordion-code/accordion-precode.html"></details>
       </div>
       <!-- Social Impact Tool -->
       <div class="snippet">
         <details w3-include-html="social-impact-tool/s-i-t-precode.html">
         </details>
       </div>
-      <!-- Link Builder Include (htmlinclude) -->
+      <!-- Link Builder Include -->
       <div class="snippet">
         <details w3-include-html="link-builder-template/l-b-t-precode.html"></details>
       </div>
