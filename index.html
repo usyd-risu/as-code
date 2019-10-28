@@ -7,6 +7,7 @@
    <title>title</title>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/darcula.min.css" type="text/css">
    <link rel="stylesheet" href="assets/css/styles.scss" type="text/css">
+   <script src="assets/js/includehtml.js"></script>
  </head>
  <body>
    <h1>Academic Services Code snippet repository</h1>
@@ -22,7 +23,10 @@
       </div>
       <!-- Social Impact Tool -->
       <div class="snippet">
-        <details w3-include-html="social-impact-tool/s-i-t-precode.html">
+        <details>
+          <summary><span class="name">Social Impact Tool by Emma Gerts</span> <span class="lang">[html]</span></summary>
+          <div w3-include-html="social-impact-tool/s-i-t-precode.html">
+          </div>
         </details>
       </div>
       <!-- Link Builder Include -->
@@ -46,7 +50,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/scss.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.js"></script>
+  <script>
+    includeHTML();
+  </script>
   <script src="assets/js/list_script.js"></script>
-  <script src="assets/js/includehtml.js"></script>
  </body>
 </html>
