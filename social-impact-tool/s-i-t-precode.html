@@ -1,0 +1,175 @@
+
+  <summary><span class="name">Social Impact Tool by Emma Gerts</span> <span class="lang">[html]</span></summary>
+  <pre><code class="code html">
+    &ltstyle>
+      body {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 10vw 5vw 75vw 5vw;
+        grid-gap: 1em;
+
+      }
+
+      header,
+      results,
+      footer {
+        grid-column: 1 / span 3;
+      }
+
+      one {
+        grid-column: 1;
+      }
+
+      two {
+        grid-column: span 1;
+      }
+
+      three {
+        grid-column: span 1;
+      }
+
+      @media (max-width: 700px) {
+
+        one,
+        two,
+        three {
+          grid-column: 1 / span 3;
+        }
+
+      }
+
+      .all {
+
+      }
+
+      /* Demo Specific Styles */
+      body {
+        margin: 0 auto;
+        max-width: 56em;
+        padding: 1em 0;
+      }
+
+      header,
+      one,
+      two,
+      three,
+      footer {
+
+        background: #EDF1FF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: arial, verdana; sans-serif
+      }
+
+      header,
+      footer {
+        height: 10vw;;
+      }
+
+      results
+      {
+        background: #EDF1FF;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+
+
+
+      }
+      div
+      {padding: 8px}
+
+      body
+      {
+        font-family: Arial, Verdana, sans-serif;
+      }
+     &lt/style>
+
+    &ltheader>
+      This is where we write context and explanation of what this tool is!
+    &lt/header>
+    &ltone>
+      &ltselect class="filterby">
+            &ltoption value="all">&lth5>Select Category&lt/h5>&lt/option>
+            &ltoption value="nhmrc">&lth5>NHMRC&lt/h5>&lt/option>
+            &ltoption value="arc">&lth5>ARC&lt/h5>&lt/option>
+            &ltoption value="link">&lth5>Linkage&lt/h5>&lt/option>
+          &lt/select>
+    &lt/one>
+    &lttwo>
+      &ltselect class="filterby">
+            &ltoption value="all">&lth5>Select impact type&lt/h5>&lt/option>
+            &ltoption value="soc">&lth5>Social&lt/h5>&lt/option>
+            &ltoption value="enviro">&lth5>Environmental&lt/h5>&lt/option>
+            &ltoption value="cult">&lth5>Cultural&lt/h5>&lt/option>
+        &ltoption value="eco">&lth5>Economic&lt/h5>&lt/option>
+          &lt/select>
+    &lt/two>
+    &ltthree>
+      &ltselect class="filterby">
+            &ltoption value="all">&lth5>Select Discipline&lt/h5>&lt/option>
+            &ltoption value="med">&lth5>Health and Medicine&lt/h5>&lt/option>
+            &ltoption value="art">&lth5>Arts and Humanities&lt/h5>&lt/option>
+            &ltoption value="law">&lth5>Law/Business&lt/h5>&lt/option>
+        &ltoption value="stem">&lth5>Science and Engineering&lt/h5>&lt/option>
+          &lt/select>
+    &lt/three>
+    &ltresults>
+      &ltdiv id="FilterContainer">
+
+
+      &ltdiv class="all nhmrc soc eco med">&lta href="https://libguides.library.usyd.edu.au/standardsandpatents">&ltb>Standards&lt/a>&lt/b>&ltbr>Access a range of Australian and International standards.&lt/div>
+      &ltdiv class="all nhmrc eco med cult"> &lta href="http://theconversation.com/au">&ltb> The Conversation&lt/a>&lt/b>&ltbr> If you've published in The Conversation, check your community engagement.&lt/div>
+      &ltdiv class="all nhmrc med stem soc">&lta href="http://ezproxy.library.usyd.edu.au/login?url=http://www.capitalmonitor.com.au/intranetlogin.aspx">&ltb>Capital Monitor&lt/a>&lt/b>&ltbr>Show your mentions in Hansard, presentations to parliamentary committees, being an expert witness in a court case.&lt/div>
+      &ltdiv class="all nhmrc med soc">&lta href="http://www.anzctr.org.au/">&ltb>Australia and New Zealand Clinical Trials Registry&lt/a>&lt/b>&ltbr> Find mentions of your research in clinical trials conducted in Australia and New Zealand. &lta href="http://www.anzctr.org.au/HowToSearch.aspx">How to Search &lt/div>
+      &ltdiv class="all soc nhmrc med">&lta href="https://www.google.com.au/advanced_search">&ltb> Google Scholar&lt/a>&lt/b>&ltbr> Find Government reports.&lt/div>
+      &ltdiv class="all soc nhmrc med">&lta href="https://www.aihw.gov.au/reports-data">&ltb> Australian Institute of Health and Welfare&lt/a>&lt/b>&ltbr> Search for your name to find references to your work.&lt/div>
+        &ltdiv class="all soc nhmrc med arc">&lta href="https://www.lens.org/">&ltb>The Lens&lt/a>&lt/b>&ltbr> Search for patents. &lta href="https://support.lens.org/help-resources/video-tutorial/patent-search-analysis/">Video Tutorial&lt/a>&lt/div>
+          &ltdiv class="all cult soc link art">&ltb>News Media&lt/b>&ltbr>Find media mentions in the following sources.&ltbr>&ltbr>
+            &lta href="http://ezproxy.library.usyd.edu.au/login?url=https://global.factiva.com/en/du/newspage.asp?pageType=group&newspageId=44302873&XSID=S003XNvZDAn5DEu5DEpNTEqN9YoM97yMHn0YqYvMq382rbRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA">Factiva *&lt/a>&ltbr>Search across Australian and International news and Media reports.&ltbr>&ltbr>&lta href="http://ezproxy.library.usyd.edu.au/login?url=http://search.proquest.com/anznews?accountid=14757">Proquest&lt/a>&ltbr>Search across Australian news sources owned by Fairfax media. &ltbr>&ltbr>
+            &lta href="http://ezproxy.library.usyd.edu.au/login?url=https://search.informit.com.au/advanced;res=TVNEWSA">TVNews Archive&lt/a>&ltbr>Search Australian television news, current affairs programs, and selected documentaries from the free-to-air networks and links to the video files.&ltbr> &ltbr>
+            &lta href="search-beta.abc.net.au/#/">ABC News&lt/a>&ltbr>Advanced search across the ABC news website.
+        &lt/div>
+        &ltdiv class="all arc art cult">&lta href="https://trove.nla.gov.au/">&ltb>Trove&lt/a>&lt/b>&ltbr>Search for your book or exhibiton across Australian Libraries, museums and archives.&lt/a>&lt/div>
+        &ltdiv class="all arc art cult">&lta href="https://www.austlit.edu.au/">&ltb>Austlit&lt/a>&lt/b>&ltbr>Search for book Australian book reviews.&lt/a>&lt/div>
+      &ltdiv class="all nhmrc eco soc enviro cult med">&ltb>&lta href="apo.org.au">APO&lt/a>&lt/b>
+          &ltbr>Find Australian public policy. &lt/div>
+        &ltdiv class="all nhmrc soc med">&ltb>&lta href="https://www.google.com.au/advanced_search">Google Advanced Search&lt/b>&lt/a>&ltbr>Find Health Programs. &lta href="https://libguides.library.usyd.edu.au/c.php?g=508093&p=3475860"> Advanced Search Tips&lt/a>&lt/div>
+        &ltdiv class="all nhmrc soc med">&ltb>&lta href="https://www.clinicalguidelines.gov.au/">Australian Clinical Practice Guidelines&lt/a>&lt/b>&ltbr>Find references to your work in clinical practice. &lta href="https://www.clinicalguidelines.gov.au/faq-page">FAQ&lt/a>&lt/div>
+
+
+
+
+
+      &lt/div>
+    &lt/results>
+    &ltfooter>
+      Contact details maybe? How to reach your ALL?
+    &lt/footer>
+    &ltscript src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript">&lt/script>
+    &ltscript type="text/javascript">
+     $("select.filterby").change(function(){
+          var filters = $.map($("select.filterby").toArray(), function(e){
+              return $(e).val();
+          }).join(".");
+          $("div#FilterContainer").find("div").hide();
+          $("div#FilterContainer").find("div." + filters).show();
+      });
+   &lt/script>
+    &ltscript type="text/javascript">
+     function autorun()
+     {
+
+     }
+     if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
+     else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
+     else window.onload = autorun;
+    &lt/script>
+  </code></pre>
+  <a href = "https://usyd-risu.github.io/as-code/social-impact-tool/social-impact-tool.zip" download>
+    Download
+  </a>
+  <a href = "https://usyd-risu.github.io/as-code/social-impact-tool/s-i-t-embedded.html">
+    See example
+  </a>
