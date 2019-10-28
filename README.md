@@ -1,5 +1,5 @@
 # as-code
- a place to store bits of code that people in academic services want to share.
+ a place to store bits of code that people in academic services want to share. check out the accordion layout here: https://usyd-risu.github.io/as-code/
 
 
 ## Table of Contents
