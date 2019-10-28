@@ -1,0 +1,94 @@
+
+  <summary><span class="name">Link Builder Template by Sam Hall</span> <span class="lang">[html]</span></summary>
+  <pre><code class="code html">
+    Class or ResCon
+   &ltselect class="filterby" id="tyID">
+     &ltoption value="0">&lt/option>
+     &ltoption value="1">Class&lt/option>
+     &ltoption value="2">ResCon&lt/option>
+   &lt/select>
+ &ltdiv id="myForm">
+ &ltdiv class="1">
+ Session Name:
+   &ltinput type="text" name="trainer" id="sID">
+ &lt/div>
+ &ltdiv class="1 2">
+ Trainer ID:
+   &ltinput type="text" name="trainer" id="tID">
+ &lt/div>
+ &ltdiv class="1 2">
+ Faculty
+   &ltselect id="fID">
+     &ltoption>&lt/option>
+     &ltoption value="archDes">Architecture Design and Planning&lt/option>
+     &ltoption value="medHea">Medicine and Health&lt/option>
+     &ltoption value="multi">Multidisciplinary&lt/option>
+     &ltoption value="nonFac">Non Faculty&lt/option>
+     &ltoption value="FASS">Arts and Social Sciences&lt/option>
+     &ltoption value="heaSci">Health Sciences&lt/option>
+     &ltoption value="sci">Science&lt/option>
+     &ltoption value="engIT">Engineering and Information Technologies&lt/option>
+
+   &lt/select>
+ &lt/div>
+ &ltdiv class="1 2">
+ Your Link:
+   &ltinput type="text" id="myMessage">
+   &ltbutton id="genbut" onclick="gen()" >Generate Link&lt/button>
+   &lt/div>
+ &lt/div>
+ &ltscript src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript">&lt/script>
+ &ltscript type="text/javascript">
+   //this is the part that filters out unneeded fields depending on whether you're getting a rescon or a class feedback form
+   var filt = function(){
+
+     document.getElementById("myForm").style.display = "none";
+     $("select.filterby").change(function(){
+         //alert("The text has been changed.");
+         var filters = $.map($("select.filterby").toArray(), function(e){
+             return $(e).val();
+         }).join(".");
+         document.getElementById("myForm").style.display = "block";
+         $("div#myForm").find("div").hide();
+         $("div#myForm").find("div." + filters).show();
+     });
+   }
+
+   // This is the part that generates the URL onclick="gen()"
+   var gen = function(){
+
+         var type    = document.getElementById("tyID");
+         var session = document.getElementById("sID");
+         var trainer = document.getElementById("tID");
+         var faculty = document.getElementById("fID");
+         var linkbox = document.getElementById("myMessage");
+         var url;
+         //var str1 = "type is: "
+         if (type.value === "0") {
+           url = "please select whether your link is for a Class or a ResCon";
+           url = url.replace(/ /gi, '');
+         }
+         else if (type.value === "1") {
+           url = 'www.Class.com' + session.value + trainer.value + faculty.value;
+           url = url.replace(/ /gi, '');
+         }
+         else if (type.value === "2") {
+           url = 'www.ResCon.com' + session.value + trainer.value + faculty.value;
+           url = url.replace(/ /gi, '');
+         }
+
+          linkbox.value = url;
+          //console.log(type is: 'type.value);
+          console.log(url);
+     };
+
+   //document.getElementById("genbut").onclick = gen();
+   window.onload = filt();
+ &lt/script>
+  </code></pre>
+  <a href = "https://usyd-risu.github.io/as-code/link-builder-template/l-b-t-linked.zip" download>
+    Download
+  </a>
+  <a href = "https://usyd-risu.github.io/as-code/link-builder-template/l-b-t-embedded.html">
+    See example
+  </a>
