@@ -1,0 +1,102 @@
+/* original css template: https://codepen.io/geoffgraham/pen/dZMYEO */
+
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 10vw 5vw 75vw 5vw;
+  grid-gap: 1em;
+
+}
+header
+{
+  padding: 0.5em;
+}
+
+header,
+results,
+footer {
+  grid-column: 1 / span 3;
+}
+
+one {
+  grid-column: 1;
+}
+
+two {
+  grid-column: span 1;
+}
+
+three {
+  grid-column: span 1;
+}
+
+@media (max-width: 700px) {
+
+  one,
+  two,
+  three {
+    grid-column: 1 / span 3;
+  }
+
+}
+
+.all {
+
+}
+
+/* Demo Specific Styles */
+body {
+  margin: 0 auto;
+  max-width: 56em;
+  padding: 1em 0;
+}
+
+header,
+one,
+two,
+three,
+footer {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: arial, verdana; sans-serif
+}
+
+header,
+footer {
+  height: 10vw;;
+  background: #363636;
+}
+footer {
+ padding: 20px;
+}
+results
+{
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding: 8px
+
+}
+  one,
+  two,
+  three
+{
+  background:#EB4326
+}
+
+div
+{
+  padding: 8px
+}
+
+div
+{
+  font-family: Arial, Verdana, sans-serif;
+}
+p
+{
+  background: #ebeced;
+  padding: 50px;
+}

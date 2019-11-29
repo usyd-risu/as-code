@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <title>Societal Impact Resource Finder</title>
+ <link rel="stylesheet" href="stylesheet.css" type="text/css">
+ </head>
+ <body>
+   <!-- nifty little trick very lightweight for simple text filtering.
+     original code: http://jsfiddle.net/6PrQW/1/
+     stackoverflow thread: https://stackoverflow.com/questions/23430949/jquery-multiple-dropdown-filter-menu/23433834
+   -->
+
+   <header>
+     <font color="white">
+     <font size=6>
+       Societal Impact Resource Finder
+       </font> </font>
+   </header>
+   <one>
+     <select class="filterby">
+           <option value="all"><h5>Select Category</h5></option>
+           <option value="nhmrc"><h5>NHMRC</h5></option>
+           <option value="arc"><h5>ARC</h5></option>
+           <option value="link"><h5>Linkage</h5></option>
+         </select>
+   </one>
+   <two>
+     <select class="filterby">
+           <option value="all"><h5>Select Impact Type</h5></option>
+           <option value="soc"><h5>Social</h5></option>
+           <option value="enviro"><h5>Environmental</h5></option>
+           <option value="cult"><h5>Cultural</h5></option>
+       <option value="eco"><h5>Economic</h5></option>
+         </select>
+   </two>
+   <three>
+     <select class="filterby">
+           <option value="all"><h5>Select Discipline</h5></option>
+           <option value="med"><h5>Health and Medicine</h5></option>
+           <option value="art"><h5>Arts and Humanities</h5></option>
+           <option value="law"><h5>Law/Business</h5></option>
+       <option value="stem"><h5>Science and Engineering</h5></option>
+         </select>
+   </three>
+   <results>
+     <div id="FilterContainer">
+
+   <p>
+   Whether applying for grants, academic tenure or job promotion you will be required to demonstrate the societal impact of your research. These impacts could be social, cultural, health, environmental or economic.
+   <br>
+   <br>
+   Have you contributed to improved services, healthier lives, better welfare, as well as increased understanding of ideas and attitudes, values and beliefs? It is important to capture this information.
+   <br>
+   This tool will help to supplement your academic metrics and altmetrics to build your impact story.
+   <br>
+   <br>
+   <b>TIP:</b> Log your research impact and engagement activities. This will help you gather evidence to support your claims.
+   <br>A great tool for this purpose is <a href="https://intranet.sydney.edu.au/research-support/advance-your-research-career/increase-your-engagement-and-impact/track-your-impact.html" target="_blank">VV Impact Tracker</a>.
+       </p>
+     <br>
+     <div class="all nhmrc soc eco med">
+       <a href="https://libguides.library.usyd.edu.au/standardsandpatents" target="_blank">
+         <b>Standards</b></a>
+         <br>Access a range of Australian and International standards.
+     </div>
+     <div class="all nhmrc eco med cult">
+       <a href="http://theconversation.com/au" target="_blank">
+         <b> The Conversation</b></a>
+         <br> Check whether the community has enaged with your Conversation articles.
+     </div>
+     <div class="all nhmrc med stem soc">
+       <a href="http://ezproxy.library.usyd.edu.au/login?url=http://www.capitalmonitor.com.au/intranetlogin.aspx" target="_blank">
+         <b>Capital Monitor</b></a>
+         <br>Australian Federal and State court proceedings, Hansard, and presentations to parliamentary committees.
+     </div>
+     <div class="all nhmrc med soc">
+       <a href="http://www.anzctr.org.au/" target="_blank">
+         <b>Australia and New Zealand Clinical Trials Registry</b></a>
+         <br> Find mentions of your research in clinical trials conducted in Australia and New Zealand.
+       <a href="http://www.anzctr.org.au/HowToSearch.aspx" target="_blank">How to Search</a>
+     </div>
+     <div class="all soc nhmrc med stem art law">
+       <a href="https://www.google.com.au/advanced_search" target="_blank">
+         <b>Google Scholar</b></a>
+         <br>Find Conference proceedings and other scholarly material.
+     </div>
+     <div class="all soc nhmrc med">
+       <a href="https://www.aihw.gov.au/reports-data" target="_blank">
+         <b> Australian Institute of Health and Welfare</b></a>
+         <br> Search for health reports that reference your work.
+     </div>
+     <div class="all soc nhmrc stem arc">
+       <a href="https://www.lens.org/">
+         <b>The Lens</b></a>
+         <br>Search for patents.
+       <a href="https://support.lens.org/help-resources/video-tutorial/patent-search-analysis/" target="_blank">Video Tutorial</a>
+       <a href="http://libguides.library.usyd.edu.au/standardsandpatents" target="_blank">Standards and Patents Library Guide</a>
+     </div>
+     <div class="all soc nhmrc stem arc">
+       <a href="https://patents.google.com/" target="_blank">
+         <b>Google Patents</b></a>
+         <br>Search for international patents.
+       <a href="http://libguides.library.usyd.edu.au/standardsandpatents" target="_blank">Standards and Patents Library Guide</a>
+     </div>
+     <div class="all soc nhmrc stem arc">
+       <a href="http://pericles.ipaustralia.gov.au/ols/auspat/quickSearch.do" target="_blank">
+         <b>Australian Patent Database</b></a>
+         <br> Search for Australian patents.
+     </div>
+     <div class="all eco stem">
+       <a href="https://github.com/" target="_blank">
+         <b>GitHub</b></a>
+         <br> Discover where your research has contributed to software development.
+     </div>
+     <div class="all cult soc link art">
+         <b>Newspapers</b>
+         <br>Find media mentions in the following sources.<br><br>
+       <a href="http://ezproxy.library.usyd.edu.au/login?url=https://global.factiva.com/en/du/newspage.asp?pageType=group&newspageId=44302873&XSID=S003XNvZDAn5DEu5DEpNTEqN9YoM97yMHn0YqYvMq382rbRQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQQAA" target="_blank">Factiva</a>
+         <br>Search across Australian and International news and Media reports.<br><br>
+       <a href="http://ezproxy.library.usyd.edu.au/login?url=http://search.proquest.com/anznews?accountid=14757" target="_blank">Proquest</a>
+         <br>Search across Australian news sources owned by Fairfax media. <br><br>
+       <a href="http://ezproxy.library.usyd.edu.au/login?url=https://search.informit.com.au/advanced;res=TVNEWSA" target="_blank">TVNews Archive</a>
+         <br>Search Australian television news, current affairs programs, and selected documentaries from the free-to-air networks and links to the video files.<br><br>
+       <a href="search-beta.abc.net.au/#/" target="_blank">ABC News</a>
+         <br>Advanced search across the ABC news website.
+     </div>
+     <div class="all arc art cult">
+       <a href="https://trove.nla.gov.au/" target="_blank">
+         <b>Trove</b></a>
+         <br>Search for your book or exhibiton across Australian Libraries, museums, and archives.
+     </div>
+     <div class="all arc art cult">
+       <a href="https://www.austlit.edu.au/" target="_blank">
+         <b>Austlit</b></a>
+         <br>Search for book Australian book reviews.
+     </div>
+     <div class="all nhmrc eco soc enviro cult med">
+       <a href="apo.org.au" target="_blank">
+         <b>APO</b></a>
+         <br>Find Australian public policy.
+     </div>
+     <div class="all nhmrc soc med">
+       <a href="https://www.google.com.au/advanced_search" target="_blank">
+         <b>Google Advanced Search</b></a>
+         <br>Find Health Programs and government documents.
+       <a href="https://libguides.library.usyd.edu.au/c.php?g=508093&p=3475860" target="_blank"> Advanced Search Tips</a>
+     </div>
+     <div class="all nhmrc soc med">
+       <a href="https://www.clinicalguidelines.gov.au/" target="_blank">
+         <b>Australian Clinical Practice Guidelines</b></a>
+         <br>Find references to your work in clinical practice. <a href="https://www.clinicalguidelines.gov.au/faq-page" target="_blank">FAQ</a>
+      </div>
+   <br>
+
+   </results>
+   <footer>
+
+       <font color="white">
+         For more help with measuring the impact of your research, book an appointment with your
+     <a href="https://library.sydney.edu.au/contacts/subjectcontacts.html"><b><font color="white">Academic Liaison Librarian.</font></b></a>
+       </font>
+
+   </footer>
+
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
+   <script src="script.js" type="text/javascript"></script>
+   <script type="text/javascript">
+    function autorun()
+    {
+
+    }
+    if (document.addEventListener) document.addEventListener("DOMContentLoaded", autorun, false);
+    else if (document.attachEvent) document.attachEvent("onreadystatechange", autorun);
+    else window.onload = autorun;
+   </script>
+ </body>
+</html>
